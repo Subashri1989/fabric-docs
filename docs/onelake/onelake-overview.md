@@ -19,7 +19,7 @@ OneLake is a single, unified, logical data lake for your whole organization. A d
 
 ## One data lake for the entire organization
 
-Before OneLake, it was easier for customers to create multiple lakes for different business groups rather than collaborating on a single lake, even with the extra overhead of managing multiple resources. OneLake focuses on removing these challenges by improving collaboration. Every customer tenant has exactly one OneLake. There can never be more than one and if you have Fabric, there can never be zero. Every Fabric tenant automatically provisions OneLake, with no extra resources to set up or manage.
+Before OneLake, it was the practice for customers to create multiple lakes for different business groups rather than collaborating on a single lake, even with the extra overhead of managing multiple resources. OneLake focuses on removing the overhead by improving collaboration. Every customer tenant has exactly one OneLake. There can never be more than one and if you have Fabric, there can never be zero. Every Fabric tenant automatically provisions OneLake, with no extra resources to set up or manage. It is a virtual layer, we will not be able to view it, but build a data layer on top of it using Lakehouse (https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview). 
 
 ### Governed by default with distributed ownership for collaboration
 
@@ -51,7 +51,7 @@ For more information, see [OneLake file explorer](onelake-file-explorer.md).
 
 ## One copy of data
 
-OneLake aims to give you the most value possible out of a single copy of data without data movement or duplication. You no longer need to copy data just to use it with another engine or to break down silos so you can analyze the data with data from other sources.
+OneLake aims to give you the most value possible out of a single copy of data without data movement or duplication. You no longer need to copy data just to use it with another engine or to break down silos so you can analyze the data with data from other sources. For example, considering a project with multiple teams like ETL team (Azure Data Factory), Data Scientists team (Azure Synapse Analytics), Reporting team (Power BI), it is necessary for the individual teams to manage access to data lake and also the teams might end up copying down the master data to a staging area before doing further analytics and transformations. This creates multiple copies of same data making it difficult to manage and maintain integrity. With OneLake, since it is woven in fabric architecture, all the teams with access to OneLake have access to the master data and need for separate accesses is eliminated here. 
 
 ### Shortcuts connect data across domains without data movement
 
